@@ -65,7 +65,7 @@ def user():
     if (firstname and address and image and email and id and phone):
         return render_template("user.html", firstname=firstname, address=address, image=image, email=email, phone=phone, id=id)
     else:
-        return redirect("/login")
+        return redirect("/")
 
 if __name__ == '__main__':
     app.run(debug=False,host="0.0.0.0")
