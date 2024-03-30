@@ -16,7 +16,7 @@ client = MongoClient(f'mongodb+srv://{username}:{password}@cluster0.txxteea.mong
 db = client['input_output']
 person_collection = db['Person']
 
-@app.route('/login', methods=['GET', 'POST'])
+@app.route('/', methods=['GET', 'POST'])
 def login():
     if request.method == "POST":
         email = request.form.get("email")
@@ -48,7 +48,7 @@ def register():
             "phone": phone
         }
         person_collection.insert_one(user_data)
-        return redirect("/login")
+        return redirect("/")
     return render_template("register.html")
 
 @app.route('/user')
