@@ -1,0 +1,6 @@
+pymongo
+flask
+base64
+flask_wtf.csrf
+os
+urllib.parse
